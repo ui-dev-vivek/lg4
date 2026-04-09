@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Input, Card, CardBody, CardHeader, Divider } from '@heroui/react';
 import { useAuth } from '../../context/AuthContext';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
+import SEO from '../../components/layout/SEO';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -26,6 +27,7 @@ export default function Login() {
 
     return (
         <div className="flex items-center justify-center min-h-[70vh]">
+            <SEO title="Login" noindex />
             <Card className="w-full max-w-sm shadow-2xl dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
                 <CardHeader className="flex flex-col gap-1 items-center justify-center py-6">
                     <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-300">

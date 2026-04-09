@@ -41,5 +41,10 @@
     body {
         @apply antialiased scroll-smooth;
         font-family: "Barlow", sans-serif !important;
+        background-color: rgba(230, 228, 228, 0.46);
+    }
+
+    .dark body {
+        background-color: var(--color-gray-950, #0a0a0a);
     }
 }

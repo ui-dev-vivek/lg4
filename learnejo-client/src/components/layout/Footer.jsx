@@ -12,8 +12,22 @@ import {
     faEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 
+import {
+    faTwitter,
+    faGithub,
+    faLinkedinIn,
+    faDiscord
+} from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+
+    const socialLinks = [
+        { icon: faTwitter, href: '#', label: 'Twitter' },
+        { icon: faGithub, href: 'https://github.com/vivek', label: 'GitHub' },
+        { icon: faLinkedinIn, href: '#', label: 'LinkedIn' },
+        { icon: faDiscord, href: '#', label: 'Discord' },
+    ];
 
     const sections = [
         {
@@ -59,11 +73,15 @@ export default function Footer() {
                             expert mentorship, and a thriving community.
                         </p>
                         <div className="flex gap-4">
-                            {/* Social Icons Placeholder */}
-                            {[1, 2, 3, 4].map(i => (
-                                <div key={i} className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all cursor-pointer text-gray-500">
-                                    <rect width="20" height="20" />
-                                </div>
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    aria-label={social.label}
+                                    className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-900 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all cursor-pointer text-gray-500"
+                                >
+                                    <FontAwesomeIcon icon={social.icon} className="text-sm" />
+                                </a>
                             ))}
                         </div>
                     </div>

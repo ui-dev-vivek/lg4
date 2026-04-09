@@ -19,7 +19,7 @@ class UdemyCourseResponse(BaseModel):
     slug: str
     category: str
     subcategory: Optional[str]
-    # description: Optional[str]
+    description: Optional[str]
     url: str
     image: Optional[str]
     language: Optional[str]

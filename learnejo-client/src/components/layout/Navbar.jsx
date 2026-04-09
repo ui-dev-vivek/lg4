@@ -28,7 +28,8 @@ import {
     faUser,
     faRightFromBracket,
     faSignInAlt,
-    faFileText
+    faFileText,
+    faBookOpen
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
@@ -40,8 +41,7 @@ export default function Navbar() {
     const navLinks = [
         { name: 'Home', path: '/', icon: faHouse },
         { name: 'About', path: '/about', icon: faCircleInfo },
-
-
+        { name: 'Courses', path: '/courses', icon: faBookOpen },
         ...(user ? [{ name: 'Dashboard', path: '/dashboard', icon: faGaugeHigh }] : [])
     ];
 
